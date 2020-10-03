@@ -1,8 +1,8 @@
 var AWS = require('aws-sdk');
-var handler = function () {
+var handler = async (event) => {
     var dynamodb = new AWS.DynamoDB({
         apiVersion: '2012-08-10',
-        endpoint: 'http://localhost:8000',
+        endpoint: 'http://dynamodb:8000',
         region: 'us-west-2',
         credentials: {
             accessKeyId: '2345',
@@ -16,4 +16,4 @@ var handler = function () {
     // codigo de la funcion
     console.log(dynamodb.listTables());
 }
-handler();
+exports.handler = handler;
