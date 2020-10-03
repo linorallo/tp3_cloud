@@ -1,0 +1,14 @@
+{
+  "name": "tp3_cloud",
+  "version": "1.0.0",
+  "description": "Trabajo Practico para la catedra de Coputacion en la Nube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lino Rallo",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.766.0"
+  }
+}
