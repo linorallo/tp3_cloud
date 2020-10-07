@@ -1,5 +1,5 @@
 var AWS = require('aws-sdk');
-var uniqid = require('uniqid');
+var uuidv4 = require('uuid');
 
 var handler = async (event) => {
     var dynamodb = new AWS.DynamoDB({
@@ -83,7 +83,7 @@ var handler = async (event) => {
                 const params = {
                     TableName: table,
                     Item: {
-                        id: uniqid(),
+                        id: uuidv4(),
                         pendiente: new Date().toISOString(),
                         fechaAlta: new Date().toISOString(),
                         destino: JSON.parse(event.body).destino,
